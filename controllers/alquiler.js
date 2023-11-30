@@ -7,14 +7,14 @@ const Alquiler = require('../models/alquiler')
 //Método GET de la API
 const alquilerGet = async(req, res = response) =>{
     //const {nombre} = req.query //Desestructuración
-    const {numero} = req.query;
+    const {cantidad_dias} = req.query;
     //Consultar todos los usuarios
     try {
         let alquiler;
 
-        if (numero) {
+        if (cantidad_dias) {
             // Si se proporciona un id, realizar una búsqueda por nombre
-            alquiler = await Alquiler.find({ numero: numero});
+            alquiler = await Alquiler.find({ cantidad_dias: cantidad_dias});
         } else {
             alquiler = await Alquiler.find();
         }

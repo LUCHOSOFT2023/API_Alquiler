@@ -24,7 +24,7 @@ const AlquilerSchema = Schema({
     },
 
     cantidad_dias:{
-        type: String,
+        type: Number,
         required:[true, 'La cantidad de días es requerido']
     }
 
